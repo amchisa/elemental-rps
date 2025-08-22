@@ -1,38 +1,83 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
-    <meta charset="utf-8"/>
-    <title>Rock Paper Scissors! ATLA Edition</title>
-    <link rel="stylesheet" href="CSS/main.css" type="text/css"/>
-    <link rel="icon" type="image/jpg" href="images/logo.jpg"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <meta charset="utf-8" />
+    <title>ElementalRPS</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
   </head>
 
   <body>
+    <div id="main">
+      <h1>ElementalRPS</h1>
 
-  <div id="main">
-    <h1>Rock Paper Scissors! Avatar Edition</h1>
-
-    <form name="gameChoice" method="post" onsubmit="return main()">
-
-      <h3>Choose an Element: </h3>
+      <form name="gameChoice" method="post" onsubmit="return main()">
+        <h3>Choose an Element:</h3>
         <p class="center">
-          <input type="radio" id="water" name="q1" value="1" class="input_hidden"/>
-          <label for="water"><img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="50"/></label>
-          <input type="radio" id="earth" name="q1" value="2" class="input_hidden"/>
-          <label for="earth"><img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="50"/></label>
-          <input type="radio" id="fire" name="q1" value="3" class="input_hidden"/>
-          <label for="fire"><img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="50"/></label>
-          <input type="radio" id="air" name="q1" value="4" class="input_hidden"/>
-          <label for="air"><img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="50"/></label>
+          <input
+            type="radio"
+            id="water"
+            name="q1"
+            value="1"
+            class="input_hidden"
+          />
+          <label for="water"
+            ><img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="50"
+          /></label>
+          <input
+            type="radio"
+            id="earth"
+            name="q1"
+            value="2"
+            class="input_hidden"
+          />
+          <label for="earth"
+            ><img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="50"
+          /></label>
+          <input
+            type="radio"
+            id="fire"
+            name="q1"
+            value="3"
+            class="input_hidden"
+          />
+          <label for="fire"
+            ><img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="50"
+          /></label>
+          <input
+            type="radio"
+            id="air"
+            name="q1"
+            value="4"
+            class="input_hidden"
+          />
+          <label for="air"
+            ><img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="50"
+          /></label>
         </p>
 
         <table id="information_station">
-
           <tr>
-            <td colspan="3">Win Percentage: <span id="win_percent">0</span>%</td>
+            <td colspan="3">
+              Win Percentage: <span id="win_percent">0</span>%
+            </td>
           </tr>
 
           <tr>
@@ -43,7 +88,9 @@
 
           <tr>
             <td>You: <span id="user_char">N/A</span></td>
-            <td>Next Ability in: <span id="ability_timer">5</span> Battle(s)</td>
+            <td>
+              Next Ability in: <span id="ability_timer">5</span> Battle(s)
+            </td>
             <td>Bot: <span id="bot_char">N/A</span></td>
           </tr>
 
@@ -56,26 +103,37 @@
           <tr>
             <td colspan="3">Info: <span id="notification"></span></td>
           </tr>
-
         </table>
 
-
         <p class="center">
-          <button id="submit" type="submit" value="Process Form">Attack!</button>
-          <button id="menu" type="button" onclick="window.location.href='index.html'">Menu</button>
+          <button id="submit" type="submit" value="Process Form">
+            Attack!
+          </button>
+          <button
+            id="menu"
+            type="button"
+            onclick="window.location.href='index.html'"
+          >
+            Menu
+          </button>
         </p>
 
-        <p class="center"><button id="ability" name="ability_use" onclick="return abilityProcessing()">Use Abilty</button></p>
-    </form>
+        <p class="center">
+          <button
+            id="ability"
+            name="ability_use"
+            onclick="return abilityProcessing()"
+          >
+            Use Abilty
+          </button>
+        </p>
+      </form>
 
-    <div class="line" id="footer_line"></div>
+      <div class="line" id="footer_line"></div>
 
-    <p class="footer">Website made by Alex Chisa 2021&copy</p>
-
-  </div>
-
+      <p class="footer">Website made by Alex Chisa 2021&copy</p>
+    </div>
   </body>
-
 </html>
 
 <script>
@@ -104,13 +162,16 @@
   var ability_timer = 5;
 
   // This is where I update all the information on the table with the variables above, since the table doesn't have a fixed inicial value, this is a requirement to make the table appear as it should.
-  document.getElementById('difficulty').innerHTML = difficulty;
-  document.getElementById('user_score').innerHTML = user_energy;
-  document.getElementById('bot_score').innerHTML = bot_energy;
-  document.getElementById('user_char').innerHTML = user_character[0];
-  document.getElementById('bot_char').innerHTML = bot_character[0];
-  // Inicial message, no use other than immersion/lore building.
-  document.getElementById('notification').innerHTML = "You approach Avatar " + bot_character[0] + ". Their lifeless eyes show no sign of emotion or personality. You know that you need to end this once and for all. You prepare yourself for battle. What will you strike with first?"
+  document.getElementById("difficulty").innerHTML = difficulty;
+  document.getElementById("user_score").innerHTML = user_energy;
+  document.getElementById("bot_score").innerHTML = bot_energy;
+  document.getElementById("user_char").innerHTML = user_character[0];
+  document.getElementById("bot_char").innerHTML = bot_character[0];
+  // Initial message, no use other than immersion/lore building.
+  document.getElementById("notification").innerHTML =
+    "You approach Avatar " +
+    bot_character[0] +
+    ". Their lifeless eyes show no sign of emotion or personality. You know that you need to end this once and for all. You prepare yourself for battle. What will you strike with first?";
 
   /* Several alert functions that I used for testing, could come in useful for looking for hidden bugs/errors in code later on.
     alert(bot_min_damage);
@@ -120,67 +181,83 @@
 
   /* Function for the bot's ability, named botabilityProcessing. This function contains the nessasary code required so that the bot knows what ability to use. Very similar to the user's abilityProcessing function, however, this one is just for the AI to use.*/
   function botabilityProcessing() {
-  // Choosing the ability based on the character that the bot is forced to use. Contains flavor-text as well as actual logic for the health and damage of the user and bot.
+    // Choosing the ability based on the character that the bot is forced to use. Contains flavor-text as well as actual logic for the health and damage of the user and bot.
     if (bot_character[0] == "Aang") {
-      document.getElementById('notification').innerHTML += " Avatar Aang used his special ability! He formed a massive tornado which threw you around, dealing " + Math.round(user_energy / 6) + " point(s) of damage. You were too stunned to retaliate.";
+      document.getElementById("notification").innerHTML +=
+        " Avatar Aang used his special ability! He formed a massive tornado which threw you around, dealing " +
+        Math.round(user_energy / 6) +
+        " point(s) of damage. You were too stunned to retaliate.";
       user_energy = user_energy - Math.round(user_energy / 6);
     } else if (bot_character[0] == "Roku") {
-      document.getElementById('notification').innerHTML += " Avatar Roku used his special ability! He melted the rock from underneith you, causing your feet to burn, and inflicting 3 point(s) of damage. You were too stunned to retaliate. Roku then cauterized his wounds with his Fire bending, healing himself 1 point(s) of damage.";
+      document.getElementById("notification").innerHTML +=
+        " Avatar Roku used his special ability! He melted the rock from underneith you, causing your feet to burn, and inflicting 3 point(s) of damage. You were too stunned to retaliate. Roku then cauterized his wounds with his Fire bending, healing himself 1 point(s) of damage.";
       user_energy = user_energy - 3;
       bot_energy++;
     } else if (bot_character[0] == "Kyoshi") {
-      document.getElementById('notification').innerHTML += " Avatar Kyoshi used her special ability! She went back in time and created a shield around herself during your last attack, completely negating all damage inflicted on her. She negated " + (prev_bot_energy - bot_energy) + " point(s) of damage.";
+      document.getElementById("notification").innerHTML +=
+        " Avatar Kyoshi used her special ability! She went back in time and created a shield around herself during your last attack, completely negating all damage inflicted on her. She negated " +
+        (prev_bot_energy - bot_energy) +
+        " point(s) of damage.";
       bot_energy = prev_bot_energy;
     } else if (bot_character[0] == "Kuruk") {
-      document.getElementById('notification').innerHTML += " Avatar Kuruk used his special ability! He froze your feet and arms in place using Water bending, dealing 1 point(s) of damage. He then used the power of Water to heal himself 3 point(s) of damage.";
+      document.getElementById("notification").innerHTML +=
+        " Avatar Kuruk used his special ability! He froze your feet and arms in place using Water bending, dealing 1 point(s) of damage. He then used the power of Water to heal himself 3 point(s) of damage.";
       user_energy--;
       bot_energy = bot_energy + 3;
     }
 
-  // Updating the table's values with the new values.
-  document.getElementById('user_score').innerHTML = user_energy;
-  document.getElementById('bot_score').innerHTML = bot_energy;
+    // Updating the table's values with the new values.
+    document.getElementById("user_score").innerHTML = user_energy;
+    document.getElementById("bot_score").innerHTML = bot_energy;
 
-  return false;
+    return false;
   }
 
   /* This function is what allows the user to use their special ability. Works exactly the same as the bot's one above, just that it is reversed for the user.*/
   function abilityProcessing() {
     // Ability functionality is based on the user's character.
     if (user_character[0] == "Aang") {
-      document.getElementById('notification').innerHTML = "You used your special ability! You summoned the power of Air bending to create a massive gust of hurricane-speed wind, knocking Avatar Kyoshi off of her feet and sending her hurtling into a cliff face, dealing " + Math.round(bot_energy / 4) + " point(s) of damage to her.";
+      document.getElementById("notification").innerHTML =
+        "You used your special ability! You summoned the power of Air bending to create a massive gust of hurricane-speed wind, knocking Avatar Kyoshi off of her feet and sending her hurtling into a cliff face, dealing " +
+        Math.round(bot_energy / 4) +
+        " point(s) of damage to her.";
       bot_energy = bot_energy - Math.round(bot_energy / 4);
     } else if (user_character[0] == "Roku") {
-      document.getElementById('notification').innerHTML = "You used your special ability! You summoned the power of Fire bending and the ancient firebending form, The Dancing Dragon to completely annihilate Avatar Kuruk, dealing 3 point(s) of damage. While he fell unconscious, you healed your wounds by cauterizing them with your Fire-bending powers, healing 1 point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You used your special ability! You summoned the power of Fire bending and the ancient firebending form, The Dancing Dragon to completely annihilate Avatar Kuruk, dealing 3 point(s) of damage. While he fell unconscious, you healed your wounds by cauterizing them with your Fire-bending powers, healing 1 point(s) of damage.";
       bot_energy = bot_energy - 3;
       user_energy++;
     } else if (user_character[0] == "Kyoshi") {
-      document.getElementById('notification').innerHTML = "You used your special ability! You created a time vortex using all 4 elements, going back in time to the last attack and creating a shield of rock around yourself, completely negating all damage you took. You negated " + (prev_user_energy - user_energy) + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You used your special ability! You created a time vortex using all 4 elements, going back in time to the last attack and creating a shield of rock around yourself, completely negating all damage you took. You negated " +
+        (prev_user_energy - user_energy) +
+        " point(s) of damage.";
       user_energy = prev_user_energy;
       document.getElementById("submit").hidden = false;
     } else if (user_character[0] == "Kuruk") {
-      document.getElementById('notification').innerHTML = "You used your special ability! You condensed the water in the sky above, causing it to rain. As the rain fell on Avatar Roku, you froze him in place dealing 1 point(s) of damage, giving you time to heal yourself with the power of Water. You healed yourself 3 point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You used your special ability! You condensed the water in the sky above, causing it to rain. As the rain fell on Avatar Roku, you froze him in place dealing 1 point(s) of damage, giving you time to heal yourself with the power of Water. You healed yourself 3 point(s) of damage.";
       bot_energy--;
       user_energy = user_energy + 3;
     }
 
-  // Hiding the button so that the user can't spam the ability and win.
-  document.getElementById('ability').hidden = true;
-  // Updating the table's values with the new values.
-  document.getElementById('user_score').innerHTML = user_energy;
-  document.getElementById('bot_score').innerHTML = bot_energy;
+    // Hiding the button so that the user can't spam the ability and win.
+    document.getElementById("ability").hidden = true;
+    // Updating the table's values with the new values.
+    document.getElementById("user_score").innerHTML = user_energy;
+    document.getElementById("bot_score").innerHTML = bot_energy;
 
-  return false;
+    return false;
   }
 
   /* This is the beginning of the main function. This function processes most of the logic for the game, including the element combinations, the win percentage, win/lose conditions, random choices, updating previous energy values for user and bot, etc. This is the function that is called by the form.*/
   function main() {
     // Bot's choice is determined through a random number generator. This generator creates a number from 1-4, which represent the different elements that the player/bot can choose from when attacking.
-    var bot_choice = Math.floor((Math.random() * 4) + 1);
+    var bot_choice = Math.floor(Math.random() * 4 + 1);
     // Player's choice is compressed into a variable, extracted from the radio buttons (element buttons on the page).
     var user_choice = document.gameChoice.q1.value;
     // Bot's ability value, generated as a number from 1-5. If the round counter (user's ability counter) is on this value, the bot's ability is activated and used.
-    var bot_ability_rando = Math.floor((Math.random() * 5) + 1);
+    var bot_ability_rando = Math.floor(Math.random() * 5 + 1);
 
     // Updating the previous energy values with the old values, before any of the logic takes place.
     prev_user_energy = user_energy;
@@ -193,19 +270,40 @@
 
     // Checks if the user has chosen. If not, it displays a message and blocks the user from submitting unless they choose an option.
     if (user_choice == "") {
-      document.getElementById('notification').innerHTML = "You haven't selected an element to attack with. Please select one of the buttons before proceeding forward.";
+      document.getElementById("notification").innerHTML =
+        "You haven't selected an element to attack with. Please select one of the buttons before proceeding forward.";
       return false;
 
-    // This if statment is activated if the user and the bot make the same choice in element (which happens quite regularly).
+      // This if statment is activated if the user and the bot make the same choice in element (which happens quite regularly).
     } else if (user_choice == bot_choice) {
-      document.getElementById('notification').innerHTML = "You attacked with the power of the element of " + names[user_choice - 1] + ". Avatar " + bot_character[0] + " also attacked with the power of " + names[bot_choice - 1] + ". Both of your attacks collided and fell harmlessly to the ground. No damage was taken by either you or Avatar " + bot_character[0] + ".";
+      document.getElementById("notification").innerHTML =
+        "You attacked with the power of the element of " +
+        names[user_choice - 1] +
+        ". Avatar " +
+        bot_character[0] +
+        " also attacked with the power of " +
+        names[bot_choice - 1] +
+        ". Both of your attacks collided and fell harmlessly to the ground. No damage was taken by either you or Avatar " +
+        bot_character[0] +
+        ".";
       score_count++;
       game_count++;
       ability_timer--;
 
-    // Water and Fire cancel out.
+      // Water and Fire cancel out.
     } else if (user_choice == 1 && bot_choice == 3) {
-      document.getElementById('notification').innerHTML = "You attacked with the power of the element of Water. Avatar " + bot_character[0] + " attacked with the power of Fire. Your water attack extingushed Avatar " + bot_character[0] + "'s Fire shield, dealing " + user_min_damage + " point(s) of damage. " + bot_character[2] + " got angry and shot a fireball at you, dealing " + bot_min_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You attacked with the power of the element of Water. Avatar " +
+        bot_character[0] +
+        " attacked with the power of Fire. Your water attack extingushed Avatar " +
+        bot_character[0] +
+        "'s Fire shield, dealing " +
+        user_min_damage +
+        " point(s) of damage. " +
+        bot_character[2] +
+        " got angry and shot a fireball at you, dealing " +
+        bot_min_damage +
+        " point(s) of damage.";
       // When the elements cancel out and they aren't the same element, both players take minimum damage, a value defined above in the block of variables at the start of the script tag.
       user_energy = user_energy - bot_min_damage;
       bot_energy = bot_energy - user_min_damage;
@@ -213,91 +311,196 @@
       game_count++;
       ability_timer--;
 
-    // Fire and Water cancel out.
+      // Fire and Water cancel out.
     } else if (user_choice == 3 && bot_choice == 1) {
-      document.getElementById('notification').innerHTML = "You attacked with the power of Fire. You formed a fire shield around yourself to protect from any damage that Avatar " + bot_character[0] + " could do to you. Avatar " + bot_character[0] + " used the power of Water to break through your Fire shield, dealing " + bot_min_damage + " point(s) of damage to you. You got angry and shot a fireball at Avatar " + bot_character[0] + ", dealing " + user_min_damage + " point(s) of damage to " + bot_character[3] + ".";
+      document.getElementById("notification").innerHTML =
+        "You attacked with the power of Fire. You formed a fire shield around yourself to protect from any damage that Avatar " +
+        bot_character[0] +
+        " could do to you. Avatar " +
+        bot_character[0] +
+        " used the power of Water to break through your Fire shield, dealing " +
+        bot_min_damage +
+        " point(s) of damage to you. You got angry and shot a fireball at Avatar " +
+        bot_character[0] +
+        ", dealing " +
+        user_min_damage +
+        " point(s) of damage to " +
+        bot_character[3] +
+        ".";
       user_energy = user_energy - bot_min_damage;
       bot_energy = bot_energy - user_min_damage;
       score_count++;
       game_count++;
       ability_timer--;
 
-    // Air and Earth cancel out.
+      // Air and Earth cancel out.
     } else if (user_choice == 4 && bot_choice == 2) {
-      document.getElementById('notification').innerHTML = "You attacked Avatar " + bot_character[0] + " with a strong burst of air. " + bot_character[2] + " threw up a stone wall, blocking most of your attack. However, " + bot_character[4] + " arm was exposed, causing " + bot_character[3] + " to take " + user_min_damage + " point(s) of damage. " + bot_character[2] + " decided to throw a rock at you, which hits you square in the face, dealing " + bot_min_damage + " point(s) of damage to you.";
+      document.getElementById("notification").innerHTML =
+        "You attacked Avatar " +
+        bot_character[0] +
+        " with a strong burst of air. " +
+        bot_character[2] +
+        " threw up a stone wall, blocking most of your attack. However, " +
+        bot_character[4] +
+        " arm was exposed, causing " +
+        bot_character[3] +
+        " to take " +
+        user_min_damage +
+        " point(s) of damage. " +
+        bot_character[2] +
+        " decided to throw a rock at you, which hits you square in the face, dealing " +
+        bot_min_damage +
+        " point(s) of damage to you.";
       user_energy = user_energy - bot_min_damage;
       bot_energy = bot_energy - user_min_damage;
       score_count++;
       game_count++;
       ability_timer--;
 
-    // Earth and Air cancel out.
+      // Earth and Air cancel out.
     } else if (user_choice == 2 && bot_choice == 4) {
-      document.getElementById('notification').innerHTML = "Avatar " + bot_character[0] + " attacked you with a strong burst of air, which you attempted to block by throwing up a stone wall. However, your arm was exposed, causing you to take " + bot_min_damage + " point(s) of damage. You decided to throw a rock at Avatar " + bot_character[0] + ", hitting " + bot_character[3] + " square in the face and dealing " + user_min_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "Avatar " +
+        bot_character[0] +
+        " attacked you with a strong burst of air, which you attempted to block by throwing up a stone wall. However, your arm was exposed, causing you to take " +
+        bot_min_damage +
+        " point(s) of damage. You decided to throw a rock at Avatar " +
+        bot_character[0] +
+        ", hitting " +
+        bot_character[3] +
+        " square in the face and dealing " +
+        user_min_damage +
+        " point(s) of damage.";
       user_energy = user_energy - bot_min_damage;
       bot_energy = bot_energy - user_min_damage;
       score_count++;
       game_count++;
       ability_timer--;
 
-    // User beats bot. Water > Earth.
+      // User beats bot. Water > Earth.
     } else if (user_choice == 1 && bot_choice == 2) {
-      document.getElementById('notification').innerHTML = "Avatar " + bot_character[0] + " attacked you with a giant dirt boulder. You threw a bolt of Water in the air, causing the boulder to turn to mud, making a splat as it fell to the ground. Some water also landed on Avatar " + bot_character[0] + ". You froze the water, freezing Avatar " + bot_character[0] + " on the spot, dealing " + user_max_damage + " point(s) of damage in the process.";
+      document.getElementById("notification").innerHTML =
+        "Avatar " +
+        bot_character[0] +
+        " attacked you with a giant dirt boulder. You threw a bolt of Water in the air, causing the boulder to turn to mud, making a splat as it fell to the ground. Some water also landed on Avatar " +
+        bot_character[0] +
+        ". You froze the water, freezing Avatar " +
+        bot_character[0] +
+        " on the spot, dealing " +
+        user_max_damage +
+        " point(s) of damage in the process.";
       score_count++;
       // When a player wins, they inflict maximum damage on the opponent. This variable is defined above, and is determined by difficulty in the lobby page.
       bot_energy = bot_energy - user_max_damage;
       game_count++;
       ability_timer--;
 
-    // User beats bot. Earth > Fire.
+      // User beats bot. Earth > Fire.
     } else if (user_choice == 2 && bot_choice == 3) {
-      document.getElementById('notification').innerHTML = "Avatar " + bot_character[0] + " shot a needle-like jet of fire at you. You blocked " + bot_character[4] + " attack with a shield of rock, and retaliated by shattering the ground underneith " + bot_character[3] + ", dealing " + user_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "Avatar " +
+        bot_character[0] +
+        " shot a needle-like jet of fire at you. You blocked " +
+        bot_character[4] +
+        " attack with a shield of rock, and retaliated by shattering the ground underneith " +
+        bot_character[3] +
+        ", dealing " +
+        user_max_damage +
+        " point(s) of damage.";
       score_count++;
       bot_energy = bot_energy - user_max_damage;
       game_count++;
       ability_timer--;
 
-    // User beats bot. Fire > Air.
+      // User beats bot. Fire > Air.
     } else if (user_choice == 3 && bot_choice == 4) {
-      document.getElementById('notification').innerHTML = "You threw a fireball at Avatar " + bot_character[0] + ". " + bot_character[2] + " tried to deflect it with a blast of air, but all it did was make the fire even hotter. The fireball landed on Avatar " + bot_character[0] + " and dealt " + user_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You threw a fireball at Avatar " +
+        bot_character[0] +
+        ". " +
+        bot_character[2] +
+        " tried to deflect it with a blast of air, but all it did was make the fire even hotter. The fireball landed on Avatar " +
+        bot_character[0] +
+        " and dealt " +
+        user_max_damage +
+        " point(s) of damage.";
       score_count++;
       bot_energy = bot_energy - user_max_damage;
       game_count++;
       ability_timer--;
 
-    // User beats bot. Air > Water.
+      // User beats bot. Air > Water.
     } else if (user_choice == 4 && bot_choice == 1) {
-      document.getElementById('notification').innerHTML = "Avatar " + bot_character[0] + " Water-bended water out of a nearby pond, throwing a giant wave at you. You formed a sphere of air around yourself, causing all the water to ricochet off and harmlessly fall down on the ground. You Air-bent the air under " + bot_character[0] + " throwing " + bot_character[3] + " off of " + bot_character[3] + " feet, dealing " + user_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "Avatar " +
+        bot_character[0] +
+        " Water-bended water out of a nearby pond, throwing a giant wave at you. You formed a sphere of air around yourself, causing all the water to ricochet off and harmlessly fall down on the ground. You Air-bent the air under " +
+        bot_character[0] +
+        " throwing " +
+        bot_character[3] +
+        " off of " +
+        bot_character[3] +
+        " feet, dealing " +
+        user_max_damage +
+        " point(s) of damage.";
       score_count++;
       bot_energy = bot_energy - user_max_damage;
       game_count++;
       ability_timer--;
 
-    // Bot beats User. Water > Earth.
+      // Bot beats User. Water > Earth.
     } else if (user_choice == 2 && bot_choice == 1) {
-      document.getElementById('notification').innerHTML = "You threw several small shards of rock at Avatar " + bot_character[0] + ". " + bot_character[2] + " whipped all the shards straight out of the air using a Water-whip, hitting you in the process and dealing " + bot_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You threw several small shards of rock at Avatar " +
+        bot_character[0] +
+        ". " +
+        bot_character[2] +
+        " whipped all the shards straight out of the air using a Water-whip, hitting you in the process and dealing " +
+        bot_max_damage +
+        " point(s) of damage.";
       // When the user looses, the bot's max damage gets subracted from their energy.
       user_energy = user_energy - bot_max_damage;
       game_count++;
       ability_timer--;
 
-    // Bot beats User. Earth > Fire.
+      // Bot beats User. Earth > Fire.
     } else if (user_choice == 3 && bot_choice == 2) {
-      document.getElementById('notification').innerHTML = "Avatar " + bot_character[0] + " threw small shards of rock at you. You tried deflecting them with Fire-bending, but instead of deflecting them, it melted them, burning you when they eventually hit you. You took " + bot_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "Avatar " +
+        bot_character[0] +
+        " threw small shards of rock at you. You tried deflecting them with Fire-bending, but instead of deflecting them, it melted them, burning you when they eventually hit you. You took " +
+        bot_max_damage +
+        " point(s) of damage.";
       user_energy = user_energy - bot_max_damage;
       game_count++;
       ability_timer--;
 
-    // Bot beats User. Fire > Air.
+      // Bot beats User. Fire > Air.
     } else if (user_choice == 4 && bot_choice == 3) {
-      document.getElementById('notification').innerHTML = "You shot a bolt of air at Avatar " + bot_character[0] + ". " + bot_character[2] + " retaliated by shooting a firebolt, penetrating the air bolt at a highspeed, hitting you right in the chest. You took " + bot_max_damage + " point(s) of damage.";
+      document.getElementById("notification").innerHTML =
+        "You shot a bolt of air at Avatar " +
+        bot_character[0] +
+        ". " +
+        bot_character[2] +
+        " retaliated by shooting a firebolt, penetrating the air bolt at a highspeed, hitting you right in the chest. You took " +
+        bot_max_damage +
+        " point(s) of damage.";
       user_energy = user_energy - bot_max_damage;
       game_count++;
       ability_timer--;
 
-    // Bot beats User. Air > Water.
+      // Bot beats User. Air > Water.
     } else if (user_choice == 1 && bot_choice == 4) {
-      document.getElementById('notification').innerHTML = "You Water-bent Water out of the clouds in the sky above, using the water to create thousands of icey shards, which you then shot at Avatar " + bot_character[0] + ". " + bot_character[2] + " made a sphere of air around " + bot_character[4] + "self, deflecting all of your ice shards, causing some of them to hit you before you could stop them, dealing " + bot_max_damage + " point(s) of damage to you.";
+      document.getElementById("notification").innerHTML =
+        "You Water-bent Water out of the clouds in the sky above, using the water to create thousands of icey shards, which you then shot at Avatar " +
+        bot_character[0] +
+        ". " +
+        bot_character[2] +
+        " made a sphere of air around " +
+        bot_character[4] +
+        "self, deflecting all of your ice shards, causing some of them to hit you before you could stop them, dealing " +
+        bot_max_damage +
+        " point(s) of damage to you.";
       user_energy = user_energy - bot_max_damage;
       game_count++;
       ability_timer--;
@@ -305,45 +508,57 @@
 
     // When the ability timer variable hits a value of 0, this if statment makes the abiltiy button appear into existence. It then resets the ability timer so that it can count down once more.
     if (ability_timer == "0") {
-      document.getElementById('ability').hidden = false;
+      document.getElementById("ability").hidden = false;
       ability_timer = 5;
-    // If the ability timer's count down reaches the number generated by the bot's ability randomiser, the bot is able to use its ability, which is done by calling the botabilityProcessing Function (defined above).
+      // If the ability timer's count down reaches the number generated by the bot's ability randomiser, the bot is able to use its ability, which is done by calling the botabilityProcessing Function (defined above).
     } else if (ability_timer == bot_ability_rando) {
       botabilityProcessing();
     }
 
     // These If-Statements represent the win conditions. When either the bot's or the user's energy reaches 0, the result is processed here. What these if-statements basically do is prevent the user or the bot from attacking any further once either wins/loses, making it so that the user has to return back to the lobby in order to play again. This can be negated by enabling the Endless Mode option in the lobby, completely bypassing this and continuing forever.
     if (bot_energy <= 0) {
-      document.getElementById('notification').innerHTML += " With your last attack, you struck Avatar " + bot_character[0] + ", knocking " + bot_character[3] + " unconscious. You have beaten your opponent, at least for now. Go back to the menu to create a new game.";
-      document.getElementById('bot_score').innerHTML = "0";
-      bot_energy = "0"
-      document.getElementById('ability').hidden = true;
+      document.getElementById("notification").innerHTML +=
+        " With your last attack, you struck Avatar " +
+        bot_character[0] +
+        ", knocking " +
+        bot_character[3] +
+        " unconscious. You have beaten your opponent, at least for now. Go back to the menu to create a new game.";
+      document.getElementById("bot_score").innerHTML = "0";
+      bot_energy = "0";
+      document.getElementById("ability").hidden = true;
       document.getElementById("submit").hidden = true;
       return false;
     } else if (user_energy <= 0) {
-      document.getElementById('notification').innerHTML += " Avatar " + bot_character[0] + " knocked you unconscious. You wake up and helplessly watch as " + bot_character[1] + " goes in for the final blow. You lost. Go back to the menu to create a new game.";
-      document.getElementById('user_score').innerHTML = "0";
-      user_energy = "0"
+      document.getElementById("notification").innerHTML +=
+        " Avatar " +
+        bot_character[0] +
+        " knocked you unconscious. You wake up and helplessly watch as " +
+        bot_character[1] +
+        " goes in for the final blow. You lost. Go back to the menu to create a new game.";
+      document.getElementById("user_score").innerHTML = "0";
+      user_energy = "0";
       document.getElementById("submit").hidden = true;
-      document.getElementById('ability').hidden = true;
+      document.getElementById("ability").hidden = true;
       return false;
-    // Here I made a small if-statement that resets the bot/user energy values if they are not a number (infinity symbol), to the infinity symbol. This only works with the Endless Mode option enabled.
+      // Here I made a small if-statement that resets the bot/user energy values if they are not a number (infinity symbol), to the infinity symbol. This only works with the Endless Mode option enabled.
     } else if (isNaN(bot_energy) || isNaN(user_energy)) {
       bot_energy = "∞";
       user_energy = "∞";
     }
 
     // Lastly, here the values for the Information Station are updated to the new values concieved by the logic above. This lets the user know exactly what happened, and provides useful information for later rounds (ability timer, difficulty, win percentage.)
-    document.getElementById('user_score').innerHTML = user_energy;
-    document.getElementById('bot_score').innerHTML = bot_energy;
-    document.getElementById('ability_timer').innerHTML = ability_timer;
-    document.getElementById('games_played').innerHTML = game_count;
-    document.getElementById('user_previous').innerHTML = names[user_choice - 1];
-    document.getElementById('bot_previous').innerHTML = names[bot_choice - 1];
+    document.getElementById("user_score").innerHTML = user_energy;
+    document.getElementById("bot_score").innerHTML = bot_energy;
+    document.getElementById("ability_timer").innerHTML = ability_timer;
+    document.getElementById("games_played").innerHTML = game_count;
+    document.getElementById("user_previous").innerHTML = names[user_choice - 1];
+    document.getElementById("bot_previous").innerHTML = names[bot_choice - 1];
     // I determine win-percentage by dividing the score count (which increases when the user wins) over the game count (which always increases), and rounding it after multiplying it by 100 (so I can get a percent, not a fraction).
-    document.getElementById('win_percent').innerHTML = Math.round((score_count / game_count) * 100);
+    document.getElementById("win_percent").innerHTML = Math.round(
+      (score_count / game_count) * 100
+    );
 
-  return false;
+    return false;
   }
 
   // NOTE: I didn't include the use of parameters or loops in either the lobby code or the game code. I felt as this was unnessasary for my needs, since I could just use global variables and calling different loops in specific orders to bypass the need for either of those Javascript abilities. Even if I wanted to, I think it would still be more efficient/intuitive to do it the way I have done it above.

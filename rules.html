@@ -1,220 +1,536 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
-    <title>Rock Paper Scissors! ATLA Edition</title>
-    <link rel="stylesheet" href="CSS/main.css" type="text/css"/>
-    <link rel="icon" type="image/jpg" href="images/logo.jpg"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>ElementalRPS</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
   </head>
 
   <body>
-  <div id="title">
-    <h1>Rules & How to Play</h1>
-  </div>
+    <div id="title">
+      <h1>Rules & How to Play</h1>
+    </div>
 
-  <div id="header">
-    <nav>
-      <ul>
-        <li><a href="index.html">Lobby</a></li>
-        <li><a href="rules.html" class="currentpage">Rules/How To Play</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div id="header">
+      <nav>
+        <ul>
+          <li><a href="index.html">Lobby</a></li>
+          <li>
+            <a href="rules.html" class="currentpage">Rules/How To Play</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
 
-  <div id="main">
+    <div id="main">
+      <h3>Element Combinations</h3>
 
-    <h3>Element Combinations</h3>
+      <table>
+        <tr>
+          <th><img src="images/logo.jpg" alt="avatar logo" height="50" /></th>
+          <th>Water</th>
+          <th>Earth</th>
+          <th>Fire</th>
+          <th>Air</th>
+        </tr>
 
-    <table>
-      <tr>
-        <th><img src="images/logo.jpg" alt="avatar logo" height="50"/></th>
-        <th>Water</th>
-        <th>Earth</th>
-        <th>Fire</th>
-        <th>Air</th>
-      </tr>
+        <tr>
+          <th>Water</th>
+          <td>
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+            <img
+              src="images/greater_than_symbol.jpg"
+              alt="a greater than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+            <img
+              src="images/less_than_symbol.jpg"
+              alt="an less than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+          </td>
+        </tr>
 
-      <tr>
-        <th>Water</th>
-        <td>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-          <img src="images/greater_than_symbol.jpg" alt="a greater than sign" height="70" class="invert"/>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-          <img src="images/less_than_symbol.jpg" alt="an less than sign" height="70" class="invert"/>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-        </td>
-      </tr>
+        <tr>
+          <th>Earth</th>
+          <td>
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+            <img
+              src="images/less_than_symbol.jpg"
+              alt="an less than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+            <img
+              src="images/greater_than_symbol.jpg"
+              alt="a greater than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+          </td>
+        </tr>
 
-      <tr>
-        <th>Earth</th>
-        <td>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-          <img src="images/less_than_symbol.jpg" alt="an less than sign" height="70" class="invert"/>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-          <img src="images/greater_than_symbol.jpg" alt="a greater than sign" height="70" class="invert"/>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-        </td>
-      </tr>
+        <tr>
+          <th>Fire</th>
+          <td>
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+            <img
+              src="images/less_than_symbol.jpg"
+              alt="an less than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+            <img
+              src="images/greater_than_symbol.jpg"
+              alt="a greater than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+          </td>
+        </tr>
 
-      <tr>
-        <th>Fire</th>
-        <td>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-          <img src="images/less_than_symbol.jpg" alt="an less than sign" height="70" class="invert"/>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-          <img src="images/greater_than_symbol.jpg" alt="a greater than sign" height="70" class="invert"/>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-        </td>
-      </tr>
+        <tr>
+          <th>Air</th>
+          <td>
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+            <img
+              src="images/greater_than_symbol.jpg"
+              alt="an greater than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+            <img
+              src="images/less_than_symbol.jpg"
+              alt="an less than sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="75"
+            />
+          </td>
+          <td>
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+            <img
+              src="images/equal_sign.jpg"
+              alt="an equal sign"
+              height="70"
+              class="invert"
+            />
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="75"
+            />
+          </td>
+        </tr>
+      </table>
 
-      <tr>
-        <th>Air</th>
-        <td>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-          <img src="images/greater_than_symbol.jpg" alt="an greater than sign" height="70" class="invert"/>
-          <img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-          <img src="images/less_than_symbol.jpg" alt="an less than sign" height="70" class="invert"/>
-          <img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="75"/>
-        </td>
-        <td>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-          <img src="images/equal_sign.jpg" alt="an equal sign" height="70" class="invert"/>
-          <img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="75"/>
-        </td>
-      </tr>
+      <div class="line"></div>
 
-    </table>
+      <h3>Rules</h3>
 
-    <div class="line"></div>
+      <p>
+        This game has you playing as the current Avatar fighting an evil version
+        of your future/past self. You are given 4 different elements to attack
+        with, and an ability that recharges every 5 battles. To win, you have to
+        lower your opponent's energy to 0, but beware, your opponent is your
+        opposite, and has access to the same 4 elements and an ability. These
+        abilities can be saved and used at a later date, but cannot be stacked
+        or kept in storage. Only one ability is available to you at a time.
+        However, the Dark Avatar, possessing much more power than you have, has
+        the ability to use an ability more times than you. However, the spirit
+        controlling the Dark Avatar has a bit of an ego, meaning that he doesn't
+        always use his ability to make for a more "enjoyable" fight.
+      </p>
 
-    <h3>Rules</h3>
+      <p>
+        Each element has a counter element, meaning when they are put against
+        each other, both players take damage. If you manage to select the right
+        element to counter the opponent's choice of element, you will inflict
+        damage on the opponent and vice versa. If you both choose the same
+        element, no damage is taken by either players. During the game, in one
+        of the rows of the "Information Station" (patent pending), messages will
+        appear telling you what effects your actions have had, including
+        important information such as the damage taken by both player and
+        opponent. The "Information Station" also includes other important
+        information such as your current energy, the last element you picked,
+        your win percentage, the recharge timer for your ability, character
+        names, and the difficulty.
+      </p>
 
-    <p>This game has you playing as the current Avatar fighting an evil version of your future/past self. You are given 4 different elements to attack with, and an ability that recharges every 5 battles. To win, you have to lower your opponent's energy to 0, but beware, your opponent is your opposite, and has access to the same 4 elements and an ability. These abilities can be saved and used at a later date, but cannot be stacked or kept in storage. Only one ability is available to you at a time. However, the Dark Avatar, possessing much more power than you have, has the ability to use an ability more times than you. However, the spirit controlling the Dark Avatar has a bit of an ego, meaning that he doesn't always use his ability to make for a more "enjoyable" fight.</p>
+      <p>
+        During the game creation process, you will see that you are able to
+        choose between several different options, such as character, difficulty,
+        and whether or not you want endless mode, which makes it so that you can
+        never win or lose. Depending on which character you pick, you will be
+        granted a different ability based on that character's talents and native
+        element. Below is a table showing the different characters, as well
+        abilities and their proprieties, which should help you decide which
+        character to pick to suit your personal playstyle. The difficulty of the
+        game affects damage, making it so that the bot either has an advantage
+        over you, or you have an advantage over them.
+      </p>
 
-    <p>Each element has a counter element, meaning when they are put against each other, both players take damage. If you manage to select the right element to counter the opponent's choice of element, you will inflict damage on the opponent and vice versa. If you both choose the same element, no damage is taken by either players. During the game, in one of the rows of the "Information Station" (patent pending), messages will appear telling you what effects your actions have had, including important information such as the damage taken by both player and opponent. The "Information Station" also includes other important information such as your current energy, the last element you picked, your win percentage, the recharge timer for your ability, character names, and the difficulty.</p>
+      <div class="line"></div>
 
-    <p>During the game creation process, you will see that you are able to choose between several different options, such as character, difficulty, and whether or not you want endless mode, which makes it so that you can never win or lose. Depending on which character you pick, you will be granted a different ability based on that character's talents and native element. Below is a table showing the different characters, as well abilities and their proprieties, which should help you decide which character to pick to suit your personal playstyle. The difficulty of the game affects damage, making it so that the bot either has an advantage over you, or you have an advantage over them.</p>
+      <h3>Characters</h3>
 
-    <div class="line"></div>
+      <table>
+        <tr>
+          <th><img src="images/logo.jpg" alt="avatar logo" height="50" /></th>
+          <th>Character Image</th>
+          <th>Element Type</th>
+          <th>Stats</th>
+          <th>Special Ability</th>
+        </tr>
 
-    <h3>Characters</h3>
+        <tr>
+          <th>Aang</th>
+          <th>
+            <img
+              src="images/avatar_aang.jpg"
+              alt="a picture of avatar aang"
+              height="150"
+            />
+          </th>
+          <th>
+            <img
+              src="images/air_emblem.jpg"
+              alt="a picture of the air emblem"
+              height="150"
+            />
+          </th>
+          <td>
+            <p>Energy: 18</p>
+            <p>Difficulty: 4/5</p>
+            <p>Ability Power: 4/5</p>
+          </td>
+          <td>
+            Aang's special ability is purely offense. When his ability is
+            activated, Aang will deal a whopping 1/4 of a player's health, which
+            can result in a maximum damage output of 6 points to the opposing
+            player, proving useful for players who like playing a more
+            aggressive playstyle and/or looking to beat the game quickly.
+          </td>
+        </tr>
 
-    <table>
+        <tr>
+          <th>Roku</th>
+          <th>
+            <img
+              src="images/avatar_roku.jpg"
+              alt="a picture of avatar roku"
+              height="150"
+            />
+          </th>
+          <th>
+            <img
+              src="images/fire_emblem.jpg"
+              alt="a picture of the fire emblem"
+              height="150"
+            />
+          </th>
+          <td>
+            <p>Energy: 22</p>
+            <p>Difficulty: 3/5</p>
+            <p>Ability Power: 2/5</p>
+          </td>
+          <td>
+            Roku's special ability is a mix between offense and defense. When
+            his special ability is activated, the opposing player will take 3
+            points of damage, and Roku will heal himself 1 point of damage. This
+            ability is mainly for more experienced players who want more of a
+            challenge, while also not feeling at a loss constantly.
+          </td>
+        </tr>
 
-      <tr>
-        <th><img src="images/logo.jpg" alt="avatar logo" height="50"/></th>
-        <th>Character Image</th>
-        <th>Element Type</th>
-        <th>Stats</th>
-        <th>Special Ability</th>
-      </tr>
+        <tr>
+          <th>Kyoshi</th>
+          <th>
+            <img
+              src="images/avatar_kyoshi.jpg"
+              alt="a picture of avatar kyoshi"
+              height="300"
+            />
+          </th>
+          <th>
+            <img
+              src="images/earth_emblem.jpg"
+              alt="a picture of the earth emblem"
+              height="150"
+            />
+          </th>
+          <td>
+            <p>Energy: 24</p>
+            <p>Difficulty: 2/5</p>
+            <p>Ability Power: 5/5</p>
+          </td>
+          <td>
+            Kyoshi's special ability is the power to negate all damage taken in
+            the previous round. This ability is insanely powerful if used in the
+            proper circumstances, as you can negate almost life threatening
+            damage, proving useful in harder difficulties where the opposing
+            player does much more damage and is more ruthless than normal. This
+            ability is good for new players or players looking to have a easier
+            time beating some of the harder difficulties.
+          </td>
+        </tr>
 
-      <tr>
-        <th>Aang</th>
-        <th><img src="images/avatar_aang.jpg" alt="a picture of avatar aang" height="150"/></th>
-        <th><img src="images/air_emblem.jpg" alt="a picture of the air emblem" height="150"/></th>
-        <td>
-          <p>Energy: 18</p>
-          <p>Difficulty: 4/5</p>
-          <p>Ability Power: 4/5</p>
-        </td>
-          <td>Aang's special ability is purely offense. When his ability is activated, Aang will deal a whopping 1/4 of a player's health, which can result in a maximum damage output of 6 points to the opposing player, proving useful for players who like playing a more aggressive playstyle and/or looking to beat the game quickly.</td>
-      </tr>
+        <tr>
+          <th>Kuruk</th>
+          <th>
+            <img
+              src="images/avatar_kuruk.jpg"
+              alt="a picture of avatar kuruk"
+              height="300"
+            />
+          </th>
+          <th>
+            <img
+              src="images/water_emblem.jpg"
+              alt="a picture of the water emblem"
+              height="150"
+            />
+          </th>
+          <td>
+            <p>Energy: 22</p>
+            <p>Difficulty: 3/5</p>
+            <p>Ability Power: 3/5</p>
+          </td>
+          <td>
+            Kuruk's special ability is the power of healing. When his special
+            ability is activated in any difficulty, he will do 1 point of damage
+            to the opposing player, and heal himself 3 points of damage. This
+            ability is for players who like to play it safe, and keep their
+            health high. Kuruk is a good choice for higher difficulties (if you
+            don't want as much of a challenge).
+          </td>
+        </tr>
+      </table>
 
-      <tr>
-        <th>Roku</th>
-        <th><img src="images/avatar_roku.jpg" alt="a picture of avatar roku" height="150"/></th>
-        <th><img src="images/fire_emblem.jpg" alt="a picture of the fire emblem" height="150"/></th>
-        <td>
-          <p>Energy: 22</p>
-          <p>Difficulty: 3/5</p>
-          <p>Ability Power: 2/5</p>
-        </td>
-        <td>Roku's special ability is a mix between offense and defense. When his special ability is activated, the opposing player will take 3 points of damage, and Roku will heal himself 1 point of damage. This ability is mainly for more experienced players who want more of a challenge, while also not feeling at a loss constantly.</td>
-      </tr>
+      <div class="line" id="footer_line"></div>
 
-      <tr>
-        <th>Kyoshi</th>
-        <th><img src="images/avatar_kyoshi.jpg" alt="a picture of avatar kyoshi" height="300"/></th>
-        <th><img src="images/earth_emblem.jpg" alt="a picture of the earth emblem" height="150"/></th>
-        <td>
-          <p>Energy: 24</p>
-          <p>Difficulty: 2/5</p>
-          <p>Ability Power: 5/5</p>
-        </td>
-        <td>Kyoshi's special ability is the power to negate all damage taken in the previous round. This ability is insanely powerful if used in the proper circumstances, as you can negate almost life threatening damage, proving useful in harder difficulties where the opposing player does much more damage and is more ruthless than normal. This ability is good for new players or players looking to have a easier time beating some of the harder difficulties.</td>
-      </tr>
-
-      <tr>
-        <th>Kuruk</th>
-        <th><img src="images/avatar_kuruk.jpg" alt="a picture of avatar kuruk" height="300"/></th>
-        <th><img src="images/water_emblem.jpg" alt="a picture of the water emblem" height="150"/></th>
-        <td>
-          <p>Energy: 22</p>
-          <p>Difficulty: 3/5</p>
-          <p>Ability Power: 3/5</p>
-        </td>
-        <td>Kuruk's special ability is the power of healing. When his special ability is activated in any difficulty, he will do 1 point of damage to the opposing player, and heal himself 3 points of damage. This ability is for players who like to play it safe, and keep their health high. Kuruk is a good choice for higher difficulties (if you don't want as much of a challenge).</td>
-      </tr>
-
-    </table>
-
-  <div class="line" id="footer_line"></div>
-
-  <p class="footer">Website made by Alex Chisa 2021&copy</p>
-
-  </div>
-
+      <p class="footer">Website made by Alex Chisa 2021&copy</p>
+    </div>
   </body>
-
 </html>
