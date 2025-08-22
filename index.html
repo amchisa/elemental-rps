@@ -1,94 +1,131 @@
 <!DOCTYPE html>
 
 <html lang="en">
-
   <head>
     <meta charset="utf-8" />
-    <title>Rock Paper Scissors! ATLA Edition </title>
-    <link rel="stylesheet" href="CSS/main.css" type="text/css"/>
-    <link rel="icon" type="image/jpg" href="images/logo.jpg"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins"/>
+    <title>ElementalRPS</title>
+    <link rel="stylesheet" href="CSS/main.css" type="text/css" />
+    <link rel="icon" type="image/jpg" href="images/logo.jpg" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Poppins"
+    />
   </head>
 
   <body>
-  <div id="title">
-    <h1>Rock Paper Scissors! ATLA Edition</h1>
-  </div>
-
-  <div id="header">
-    <nav>
-      <ul>
-        <li><a href="index.html" class="currentpage">Lobby</a></li>
-        <li><a href="rules.html">Rules/How To Play</a></li>
-      </ul>
-    </nav>
-  </div>
-
-  <div id="main" class="lobby">
-
-    <p><img src="images/city.jpg" alt="an image of a city at night" height="675"/></p>
-
-    <h3>Intro</h3>
-
-    <p>Water. Earth. Fire. Air. Stories long ago told of a magical device, a device built long ago that would let people travel from the past or the future into the present world. As the Avatar, you are tasked with finding this device in order to beat the spirit of darkness, Vaatu, who just escaped from their prison in the spirit world. After months of searching, and many close encounters, you find the machine. You power it with the spirit of the Avatar within yourself, and a portal opens. You enter the portal and find that Vaatu has already arrived and possessed the Avatar, creating the Dark Avatar, a combination of the two. You clentch your fists and prepare for battle.</p>
-
-    <p><button type="button" id="play_button" name="play" value="play" onclick="return reveal()">Click here to Play!</button></p>
-
-    <form name="gameChoice" method="post" onsubmit="return main()">
-
-    <div id="game_options" hidden>
-      <h3>Game Settings</h3>
-      <p>Character: <select id="character_input" name="character">
-        <option value="air">Aang</option>
-        <option value="fire">Roku</option>
-        <option value="earth">Kyoshi</option>
-        <option value="water">Kuruk</option>
-      </select></p>
-      <p>Endless Mode: <input type="checkbox" id="endless_mode" name="q1" value="endless"/></p>
-      <p>Difficulty: <select id="difficulty" name="difficulty">
-        <option value="Baby">Baby</option>
-        <option value="Easy">Easy</option>
-        <option value="Normal">Normal</option>
-        <option value="Hard">Hard</option>
-        <option value="Insane">Insane</option>
-      </select></p>
+    <div id="title">
+      <h1>ElementalRPS</h1>
     </div>
 
-      <p id="submit" hidden>
-        <button type="submit" value="Process Form">Continue to Game</button>
+    <div id="header">
+      <nav>
+        <ul>
+          <li><a href="index.html" class="currentpage">Lobby</a></li>
+          <li><a href="rules.html">Rules/How To Play</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div id="main" class="lobby">
+      <p>
+        <img
+          src="images/city.jpg"
+          alt="an image of a city at night"
+          height="675"
+        />
       </p>
 
-    </form>
+      <h3>Intro</h3>
 
-  <div class="line" id="footer_line"></div>
+      <p>
+        Water. Earth. Fire. Air. Stories long ago told of a magical device, a
+        device built long ago that would let people travel from the past or the
+        future into the present world. As the Avatar, you are tasked with
+        finding this device in order to beat the spirit of darkness, Vaatu, who
+        just escaped from their prison in the spirit world. After months of
+        searching, and many close encounters, you find the machine. You power it
+        with the spirit of the Avatar within yourself, and a portal opens. You
+        enter the portal and find that Vaatu has already arrived and possessed
+        the Avatar, creating the Dark Avatar, a combination of the two. You
+        clentch your fists and prepare for battle.
+      </p>
 
-  <p class="footer">Website made by Alex Chisa 2021&copy</p>
+      <p>
+        <button
+          type="button"
+          id="play_button"
+          name="play"
+          value="play"
+          onclick="return reveal()"
+        >
+          Click here to Play!
+        </button>
+      </p>
 
-  </div>
+      <form name="gameChoice" method="post" onsubmit="return main()">
+        <div id="game_options" hidden>
+          <h3>Game Settings</h3>
+          <p>
+            Character:
+            <select id="character_input" name="character">
+              <option value="air">Aang</option>
+              <option value="fire">Roku</option>
+              <option value="earth">Kyoshi</option>
+              <option value="water">Kuruk</option>
+            </select>
+          </p>
+          <p>
+            Endless Mode:
+            <input
+              type="checkbox"
+              id="endless_mode"
+              name="q1"
+              value="endless"
+            />
+          </p>
+          <p>
+            Difficulty:
+            <select id="difficulty" name="difficulty">
+              <option value="Baby">Baby</option>
+              <option value="Easy">Easy</option>
+              <option value="Normal">Normal</option>
+              <option value="Hard">Hard</option>
+              <option value="Insane">Insane</option>
+            </select>
+          </p>
+        </div>
 
+        <p id="submit" hidden>
+          <button type="submit" value="Process Form">Continue to Game</button>
+        </p>
+      </form>
+
+      <div class="line" id="footer_line"></div>
+
+      <p class="footer">Website made by Alex Chisa 2021&copy</p>
+    </div>
   </body>
-
 </html>
 
 <script>
-// Here I have a couple arrays. Their functions are to store the names, genders and pronouns of the characters for use in the game. They are picked based on which character the player has chosen, and they are then sent to sessionStorage for later use.
-var Aang = ["Aang", "he", "He", "him", "his"];
-var Kyoshi = ["Kyoshi", "she", "She", "her", "her"];
-var Roku = ["Roku", "he", "He", "him", "his"];
-var Kuruk = ["Kuruk", "he", "He", "him", "his"];
+  // Here I have a couple arrays. Their functions are to store the names, genders and pronouns of the characters for use in the game. They are picked based on which character the player has chosen, and they are then sent to sessionStorage for later use.
+  var Aang = ["Aang", "he", "He", "him", "his"];
+  var Kyoshi = ["Kyoshi", "she", "She", "her", "her"];
+  var Roku = ["Roku", "he", "He", "him", "his"];
+  var Kuruk = ["Kuruk", "he", "He", "him", "his"];
 
-// This function, named reveal, reveals the hidden options that only appear once the play button is pressed. As you can see, it also hides the play button.
+  // This function, named reveal, reveals the hidden options that only appear once the play button is pressed. As you can see, it also hides the play button.
   function reveal() {
     document.getElementById("game_options").hidden = false;
     document.getElementById("submit").hidden = false;
-    document.getElementById('play_button').hidden = true;
-  return false;
+    document.getElementById("play_button").hidden = true;
+    return false;
   }
 
   // This is the main function. It is called by the form in HTML, and it updates sessionStorage variables using the user's picked options. As you will see in the game code, these sessionStorage variables are used for practically anything affected by the difficulty or character.
   function main() {
     // Retrieves the user's chosen character for the if-statements below.
-    var character = document.getElementById('character_input').value;
+    var character = document.getElementById("character_input").value;
 
     // The character information is updated to sessionStorage here. When a character is chosen, the character with the opposite element will be picked for the bot (for balancing purposes), as such if the user picks Aang, they are guaranteed to get Kyoshi as their opponent, and vice versa. This is also the same with Kuruk and Roku. Each of the characters have different energy values, all of which are updated and sent to sessionStorage here.
     if (character == "air") {
@@ -115,7 +152,7 @@ var Kuruk = ["Kuruk", "he", "He", "him", "his"];
     }
 
     // The difficulty value (string) is sent to sessionStorage in order to be displayed in the Information Station table.
-    var difficulty = document.getElementById('difficulty').value;
+    var difficulty = document.getElementById("difficulty").value;
     sessionStorage.setItem("dif", difficulty);
 
     // This is where the difficulty chosen actually influences the game. The different difficulties have different values for the user's and bot's damage, making the game easier/harder based on what option is chosen by the end user.
@@ -147,7 +184,7 @@ var Kuruk = ["Kuruk", "he", "He", "him", "his"];
     }
 
     // If endless mode is checked by the user, the user's and bot's energy is updated to the infinty symbol.
-    if (document.getElementById('endless_mode').checked) {
+    if (document.getElementById("endless_mode").checked) {
       sessionStorage.setItem("pe", "∞");
       sessionStorage.setItem("bpe", "∞");
     }
@@ -155,6 +192,6 @@ var Kuruk = ["Kuruk", "he", "He", "him", "his"];
     // The window is sent to the main game by Javascript.
     window.location = "main.html";
 
-  return false;
-}
+    return false;
+  }
 </script>
